@@ -6,7 +6,7 @@
     <Head title="Welcome" />
 
     <MainLayout>
-        
+        <div class="bg-green-500">Home Vue</div>
     </MainLayout>
 
 </template>
