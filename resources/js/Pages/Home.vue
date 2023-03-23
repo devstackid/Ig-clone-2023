@@ -3,6 +3,8 @@
     import { Head, Link, router } from '@inertiajs/vue3';
     import MainLayout from '@/Layouts/MainLayout.vue';
 
+    import LikesSection from '@/Components/LikesSection.vue'
+
     import 'vue3-carousel/dist/carousel.css'
     import { Carousel, Slide, Navigation } from 'vue3-carousel'
 
@@ -24,7 +26,7 @@
 </script>
 
 <template>
-    <Head title="Welcome" />
+    <Head title="Instagram" />
 
     <MainLayout>
         <div class="mx-auto lg:pl-0 md:pl-[80px] pl-0">
@@ -47,11 +49,60 @@
                         <div class="text-xs mt-2 w-[60px] truncate text-ellipsis overflow-hidden">Name Here</div>
                     </Link>
                 </Slide>
+
+                <template #addons>
+                    <Navigation />
+                </template>
             </Carousel>
+
+            <div id="Posts" class="px-4 max-w-[600px] mx-auto mt-10">
+                <div class="flex items-center justify-between py-2">
+                    <div class="flex items-center">
+                        <Link href="/" class="flex items-center">
+                            <img class="rounded-full w-[38px]" src="http://picsum.photos/id/8/300/320">
+                            <div class="ml-4 font-extrabold text-[15px]">Name Here</div>
+                        </Link>
+                        <div class="flex items-center text-gray-500 text-[15px]">
+                            <span class="-mt-5 ml-2 mr-[5px] text-[35px]">.</span>
+                            <div>Date Here</div>
+                        </div>
+                    </div>
+
+                    <DotsHorizontal class="cursor-pointer" :size="27"/>
+                </div>
+
+                <div class="bg-black rounded-lg w-full min-h-[400px] flex items-center">
+                    <img class="mx-auto w-full" src="http://picsum.photos/id/8/300/320">
+                </div>
+
+                <LikesSection />
+
+                <div class="text-black font-extrabold py-1">3 Likes</div>
+                <div>
+                    <span class="text-black font-extrabold">Name Here</span>
+                    this is some caption or text here
+                </div>
+                <button class="text-gray-500 font-extrabold py-1">
+                    View all 4 comments
+                </button>
+            </div>
+
+            <div class="pb-20"></div>
         </div>
     </MainLayout>
-
 </template>
+
+<style>
+    .carousel__prev,
+    .carousel__next,
+    .carousel__prev:hover,
+    .carousel__next:hover {
+        color: rgb(49,49,49);
+        background-color: rgb(255,255,255);
+        border-radius: 100%;
+        margin: 0 20px;
+    }
+</style>
 
 
 
