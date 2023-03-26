@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="bg-black rounded-lg w-full min-h-[400px] flex items-center">
-                    <img class="mx-auto w-full" src="http://picsum.photos/id/8/300/320">
+                    <img class="mx-auto w-full" src="http://picsum.photos/id/12/300/320">
                 </div>
 
                 <LikesSection />
