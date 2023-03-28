@@ -10,7 +10,7 @@
     import EmoticonHappyOutline from 'vue-material-design-icons/EmoticonHappyOutline.vue';
 
     let comment = ref('')
-    let deleteType = ref(true)
+    let deleteType = ref(null)
     let id = ref(null)
 
     const user = usePage().props.auth.user
