@@ -81,7 +81,7 @@ const closeOverlay = () => {
                 <div class="text-lg font-extrabold">
                     New Reel
                 </div>
-                <button class="text-lg text-blue-500 hover:text-gray-900 font-extrabold">
+                <button @click="createPostFunc()" class="text-lg text-blue-500 hover:text-gray-900 font-extrabold">
                     Share
                 </button>
             </div>
